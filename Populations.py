@@ -14,6 +14,7 @@ choice = int()
 
 def plotResults (plotTime, plotAmount):
 	#plt.axis([0, time, startingAmount, amount])
+	print ("Your population has gone extinct after ",time,"periods.")
 	plt.title("Population oscilation")
 	plt.xlabel("Time")
 	plt.ylabel("Amount of members of population")
@@ -30,7 +31,7 @@ while (amount > 0):
 	amountArray.append(amount)
 	print (amount)
 
-print ("Your population gone extinct after ",time,"periods.")
+
 plotResults(timeArray, amountArray)
 
 
