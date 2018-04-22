@@ -1,16 +1,13 @@
 import random, matplotlib.pyplot as plt
 
-amount = int()
 startingAmount = input ("How many members will be at the start?: ")
 startingAmount = int (startingAmount)
-amount = startingAmount
-time = int()
-timeArray = int()
+amount = int(startingAmount)
 timeArray = [0]
 amountArray = [startingAmount]
-adding = int()
 adding = [1,-1]
 choice = int()
+time = int()
 
 def plotResults (plotTime, plotAmount, timeAmount):
 	#plt.axis([0, time, startingAmount, amount])
