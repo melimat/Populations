@@ -1,6 +1,9 @@
 import random, matplotlib.pyplot as plt
 
+a = int(input("Increasing/decreasing value?: "))
 startingAmount = int (input ("How many members will be at the start?: "))
+global adding
+adding = [a, -a]
 
 
 def plotResults (plotTime, plotAmount, timeAmount):
@@ -18,15 +21,21 @@ def extinctionSym (startingAmount):
     time = int()
     timeArray = [0]
     amountArray = [startingAmount]
-    adding = [1,-1]
+    #adding = [1,-1]
     choice = int()
     while (amount > 0):
     	time = time + 1
     	timeArray.append(time)
     	choice = random.choice(adding)
     	amount = amount + choice
-    	amountArray.append(amount)
-    	print (amount)
+    	if (amount >= 0):
+    	    amountArray.append(amount)
+    	    print (amount)
+    	else:
+    	    amount = 0
+    	    amountArray.append(amount)
+    	    print (amount)
+            	
     return (timeArray, amountArray, time)
 
 generated_data = extinctionSym(startingAmount)
