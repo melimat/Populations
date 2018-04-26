@@ -4,6 +4,14 @@ a = int(input("Increasing/decreasing value?: "))
 startingAmount = int (input ("How many members will be at the start?: "))
 global adding
 adding = [a, -a]
+global timeArray
+timeArray = [0]
+global amountArray
+amountArray = [startingAmount]
+global time
+time = int()
+
+
 
 
 def plotResults (plotTime, plotAmount, timeAmount):
@@ -18,9 +26,9 @@ def plotResults (plotTime, plotAmount, timeAmount):
 	
 def extinctionSym (startingAmount):
     amount = int(startingAmount)
-    time = int()
-    timeArray = [0]
-    amountArray = [startingAmount]
+    time = 0
+    #timeArray = [0]
+    #amountArray = [startingAmount]
     #adding = [1,-1]
     choice = int()
     while (amount > 0):
@@ -36,10 +44,12 @@ def extinctionSym (startingAmount):
     	    amountArray.append(amount)
     	    print (amount)
             	
-    return (timeArray, amountArray, time)
+    #return (timeArray, amountArray, time)
 
-generated_data = extinctionSym(startingAmount)
-plotResults (generated_data[0], generated_data[1], generated_data[2])
+#generated_data = extinctionSym(startingAmount)
+#plotResults (generated_data[0], generated_data[1], generated_data[2])
+extinctionSym(startingAmount)
+plotResults(timeArray, amountArray, time)
 	
 
 
