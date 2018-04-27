@@ -9,24 +9,24 @@ timeArray = [0]
 global amountArray
 amountArray = [startingAmount]
 global time
-time = int()
 
 
 
 
-def plotResults (plotTime, plotAmount, timeAmount):
-	#plt.axis([0, time, startingAmount, amount])
-	print ("Your population has gone extinct after ",timeAmount,"periods.")
-	plt.title("Population oscilation")
-	plt.xlabel("Time")
-	plt.ylabel("Amount of members of population")
-	plt.plot(plotTime, plotAmount)
-	#plt.table(cellText=None, cellColours=None, cellLoc='right', colWidths=None, rowLabels=None, rowColours=None, rowLoc='left', colLabels=None, colColours=None , colLoc='center',loc='bottom', bbox=None)
-	plt.show()
+def plotResults (plotTime, plotAmount):
+    timeLenght = int(len(plotTime)-1)
+    #plt.axis([0, time, startingAmount, amount])
+    print ("Your population has gone extinct after ",timeLenght,"periods.")
+    plt.title("Population oscilation")
+    plt.xlabel("Time")
+    plt.ylabel("Amount of members of population")
+    plt.plot(plotTime, plotAmount)
+    #plt.table(cellText=None, cellColours=None, cellLoc='right', colWidths=None, rowLabels=None, rowColours=None, rowLoc='left', colLabels=None, colColours=None , colLoc='center',loc='bottom', bbox=None)
+    plt.show()
 	
 def extinctionSym (startingAmount):
     amount = int(startingAmount)
-    time = 0
+    time = int()
     #timeArray = [0]
     #amountArray = [startingAmount]
     #adding = [1,-1]
@@ -49,7 +49,7 @@ def extinctionSym (startingAmount):
 #generated_data = extinctionSym(startingAmount)
 #plotResults (generated_data[0], generated_data[1], generated_data[2])
 extinctionSym(startingAmount)
-plotResults(timeArray, amountArray, time)
+plotResults(timeArray, amountArray)
 	
 
 
